@@ -14,6 +14,7 @@
                                 <th>No</th>
                                 <th>Aksi</th>
                                 <th>Nama</th>
+                                <th>Date</th>
                                 <th>isi</th>
                             </thead>
                             <tbody>
@@ -28,6 +29,7 @@
                                       </div>
                                   </td>
                                   <td>{{ $comment->nama  }}</td>
+                                  <td>{{ $comment->created_at->diffForHumans()  }}</td>
                                   <td>{{ $comment->isi }}</td>
                               </tr>
                                 @endforeach

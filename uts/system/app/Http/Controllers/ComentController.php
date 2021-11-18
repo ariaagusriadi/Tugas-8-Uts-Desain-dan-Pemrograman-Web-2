@@ -13,6 +13,6 @@ class ComentController extends Controller {
     $comment->nama = request('nama');
     $comment->save();
 
-    return redirect('home');
+    return redirect()->back();
   }
 }

@@ -26,4 +26,5 @@ class ComentAdminController extends Controller {
     $data['comment'] = $comment;
     return view('template.coment.show', $data);
   }
+  
 }

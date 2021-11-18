@@ -14,7 +14,7 @@
                     </p>
                     <hr>
                     <div class="container">
-                        <form action="{{ url('comment') }}" method="POST">
+                        <form action="" method="POST">
                             @csrf
                             <div class="form-group">
                                 <label for="" class="control-label"><strong> Nama</strong></label>
@@ -27,7 +27,7 @@
                                 <br>
                                 <textarea name="isi" name="" id="" cols="30" rows="10" class="form-control">
 
-                            </textarea>
+                                </textarea>
                             </div>
 
                             <br>
@@ -41,18 +41,23 @@
                         <br>
                         <hr>
                         <div class="">
-                          <h1>Comment</h1>
-                          <hr>
-                          @foreach ($list_coment as $coment)
-                             
-                                <h4>{{ $coment->nama }}</h4>
-                                <p>{{ $coment->isi }}</p>
+                            <h1>Comment</h1>
+                            <hr>
+                            @foreach ($list_coment as $coment)
 
+                                <div class=" form-group">
+                                    <p>
+                                    <h4>{{ $coment->nama }}</h4>
+                                    <p>{{ $coment->created_at->diffForHumans() }}</p>
+                                    <p>{{ $coment->isi }}</p>
+                                    </p>
+
+                                </div>
                                 <hr>
-                              
-                          @endforeach
+
+                            @endforeach
                         </div>
-                        
+
                     </div>
 
 

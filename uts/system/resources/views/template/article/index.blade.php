@@ -36,6 +36,7 @@
                                 <th>Aksi</th>
                                 <th>Title</th>
                                 <th>Write</th>
+                                <th>Date</th>
                                 <th>Descripsion</th>
                             </thead>
                             <tbody>
@@ -55,6 +56,7 @@
                                         </td>
                                         <td>{{ $article->title }}</td>
                                         <td>{{ $article->write }}</td>
+                                        <td>{{ $article->created_at->diffForHumans() }}</td>
                                         <td>{{ $article->description }}</td>
                                     </tr>
 

@@ -40,7 +40,7 @@ Route::get('logout', [AuthController::class , 'logout']);
 
 // client
 
-Route::resource('comment', ComentController::class);
+// Route::resource('comment', ComentController::class);
+Route::post('article/{article}', [ComentController::class , 'store']);
 Route::get('home', [ClientController::class, 'index']);
 Route::get('article/{article}', [ClientController::class, 'show']);
-Route::post('article/{article}', [ClientController::class, 'comment']);
